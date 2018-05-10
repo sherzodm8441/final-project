@@ -4,10 +4,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Bootstrap Template</title>
+	<title>final aregkserg</title>
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- ScrollReveal -->
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -17,13 +20,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
 
-	<script>
-		$(function() {
-
-
-
-		});
-	</script>
+	
 	<style>
 	</style>
 </head>
@@ -32,7 +29,7 @@
 
 	<div id="navcon2" class="container-fluid">
 		<div class="brand">
-			<h2>Solar System</h2>
+		<img src="img/logo.jpg">
 		</div>
 		<ul class="main-nav">
 			<li><a href="">fghdfhg</a></li>
@@ -46,6 +43,7 @@
 	<video autoplay muted loop id="myVideo">
   <source src="video/solar-anim.mp4" type="video/mp4">
 </video>
+
 	
 
 	<div id="navcon" class="container-fluid">
@@ -54,7 +52,7 @@
 			<div class="container1">
 				<img src="cropped/mercury.png" alt="Avatar" class="image ">
 				<div class="overlay">
-					<div class="text"><a href="#">Hello World</a></div>
+					<div class="text"><a href="#mercury">Hello World</a></div>
 				</div>
 			</div>
 			</div>
@@ -62,7 +60,7 @@
 			<div class="container1 ">
 				<img src="cropped/venus.png" alt="Avatar" class="image">
 				<div class="overlay">
-					<div class="text">Hello World</div>
+					<div class="text"><a href="#venus">Hello World</a></div>
 				</div>
 			</div>
 			</div>
@@ -123,7 +121,7 @@
 </div>
 	<main>
 		<div>
-			<h2 class="animated bounce">The Solar System</h2>
+			<h2 class="love">The Solar System</h2>
 			<p>It is estimated that the solar system was formed about 4.5 billion years ago from a huge swirling cloud of dust called a nebula. One theory suggests that the formation of the nebula was triggered by the shockwave from an exploding supernova. As more
 				and more dust accumulated in the center, its gravity increased and attracted more dust. This ball of cloud started to spin and collapsed on itself, forming a flat disc. The accumulation of more dust in the center caused the temperature to rise rapidly.
 				When it got hot enough, it set off a nuclear reaction. Hydrogen atoms fused to form helium, releasing enormous amounts of energy. This was the birth of the sun, but it took more than 10 million years for the sun to develop and to become a recognizable
@@ -150,7 +148,7 @@
 			</p>
 			<hr>
 		</div>
-		<div>
+		<div id="mercury">
 			<h2>Mercury</h2>
 			<p>Mercury is the first planet from the sun. And it is the smallest planet in the solar system with a diameter of 4,879km. It is also one of the 5 planets that can be seen with a naked eye. It is a terrestrial planet because it composed of rocky core,
 				mantle and a crust. Since Mercury is closest to the sun it takes only 88 days for it to complete its orbit. But it takes 176 days for it to complete one rotation. Mercury is the second densest planet after the Earth because it is mainly composed of
@@ -167,7 +165,7 @@
 			</p>
 			<hr>
 		</div>
-		<div>
+		<div id="venus">
 			<h2>Venus</h2>
 			<p>Venus is the second planet from the sun and the third brightest object after the sun and the moon on Earth’s sky. It is terrestrial planet it is made up of rocks. One day on Venus is longer than a year. It takes 243 Earth-days to complete one rotation.
 				The orbit of the planet takes 225 Earth-days, making a year on Venus shorter on day on Venus. It has the least eccentric and the most circular orbit in the solar system. It is sometimes referred to as the Earth’s sister planet because they have many
@@ -289,6 +287,69 @@
 			<hr>
 		</div>
 	</main>
+	<script>
+		window.sr = ScrollReveal();
+		sr.reveal('#navcon2', {
+			duration:2500,
+			origin:'bottom'
+		});
+		sr.reveal('#myVideo', {
+			duration:2500,
+			origin:'top',
+			distance:'400px'
+		});
+		sr.reveal('#navcon', {
+			duration:2000,
+			origin:'bottom'
+			
+		});
+		sr.reveal('.love', {
+			duration:2000,
+			origin:'right',
+			
+		});
+	</script>
+	<script>
+		$(function() {
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+
+		});
+	</script>
 </body>
 
 </html>

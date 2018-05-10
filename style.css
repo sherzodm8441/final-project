@@ -104,6 +104,9 @@ header {
 }
 #navcon2 {
     background-color:black;
+    position:fixed;
+    z-index: 1000;
+    width:100%;
    
 }
 .main-nav {
@@ -128,6 +131,11 @@ header {
 }
 .brand{
     float:left;
+    
+}
+.brand img {
+    max-height: 75px;
+    max-width: 125px;
 }
 
 #myVideo {
@@ -136,8 +144,8 @@ header {
     bottom: 0;
     min-width: 100%; 
     min-height: 100%;
+    margin-top:75px;
 }
 * {
     box-sizing: border-box;
 }
-
