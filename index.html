@@ -27,17 +27,50 @@
 
 <body>
 
-	<div id="navcon2" class="container-fluid">
-		<div class="brand">
-		<img src="img/logo.jpg">
-		</div>
-		<ul class="main-nav">
-			<li><a href="">fghdfhg</a></li>
-			<li><a href="">fghdfhg</a></li>
-			<li><a href="">fghdfhg</a></li>
-			<li><a href="">fghdfhg</a></li>
-		</ul>
-	</div>
+	<!--<div id="navcon2" class="container-fluid">-->
+	<!--	<div class="brand">-->
+	<!--	<img src="img/logo.jpg">-->
+	<!--	</div>-->
+	<!--	<ul class="main-nav">-->
+	<!--		<li><a href="">fghdfhg</a></li>-->
+	<!--		<li><a href="">fghdfhg</a></li>-->
+	<!--		<li><a href="">fghdfhg</a></li>-->
+	<!--		<li><a href="">fghdfhg</a></li>-->
+	<!--	</ul>-->
+	<!--</div>-->
+	
+	 <div class="navbar  navbar-fixed-top" id="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+              <a href="#landing" class="navbar-brand"><img src="img/logo.jpg"></a>
+
+      </div>
+        
+        <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#landing">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Info <span class="caret"></span></a>
+          <ul class="dropdown-menu" id="ul">
+            <li><a href="#time">Time</a></li>
+            <li><a href="#weather">Weather</a></li>
+            <li><a href="#flight">Flight</a></li>
+            <li><a href="#participation">Participation</a></li>
+          </ul>
+        </li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contacts</a></li>
+      </ul>
+      
+    </div>
+
+    </div>
+    </div>
 	
 	
 	<video autoplay muted loop id="myVideo">
@@ -120,6 +153,8 @@
 	</div>
 </div>
 	<main>
+		<div class="container">
+			<div class="row"
 		<div>
 			<h2 class="love">The Solar System</h2>
 			<p>It is estimated that the solar system was formed about 4.5 billion years ago from a huge swirling cloud of dust called a nebula. One theory suggests that the formation of the nebula was triggered by the shockwave from an exploding supernova. As more
@@ -286,10 +321,12 @@
 			</p>
 			<hr>
 		</div>
+		</div>
+		</div>
 	</main>
 	<script>
 		window.sr = ScrollReveal();
-		sr.reveal('#navcon2', {
+		sr.reveal('#navbar', {
 			duration:2500,
 			origin:'bottom'
 		});
@@ -342,7 +379,7 @@ $('a[href*="#"]')
           } else {
             $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
             $target.focus(); // Set focus again
-          };
+          }
         });
       }
     }

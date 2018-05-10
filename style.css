@@ -34,7 +34,7 @@ header {
 main {
     margin-top: 30px;
     background-color: black;
-    color:red;
+    color:white;
 }
 
 
@@ -102,40 +102,45 @@ header {
     padding-top:50px;
     padding-bottom: 50px;
 }
-#navcon2 {
-    background-color:black;
-    position:fixed;
-    z-index: 1000;
-    width:100%;
+/*#navcon2 {*/
+/*    background-color:black;*/
+/*    position:fixed;*/
+/*    z-index: 1000;*/
+/*    width:100%;*/
    
-}
-.main-nav {
-    float:right;
-    list-style:none;
-    background-color:black;
-    margin-top:20px;
-}
-.main-nav li {
-    display:inline-block;
-    margin-left: 20px;
-}
-.main-nav li a {
-    color:red;
-    text-decoration:none;
-    font-size:20px;
-}
-.main-nav li a:hover {
-    border-bottom:2px solid red;
-    transition:all .25s ease-in;
-    padding-bottom: 10px;
-}
-.brand{
-    float:left;
+/*}*/
+/*.main-nav {*/
+/*    float:right;*/
+/*    list-style:none;*/
+/*    background-color:black;*/
+/*    margin-top:20px;*/
+/*}*/
+/*.main-nav li {*/
+/*    display:inline-block;*/
+/*    margin-left: 20px;*/
+/*}*/
+/*#ul li a {*/
+/*    color:red;*/
+/*    text-decoration:none;*/
+/*    font-size:20px;*/
+/*}*/
+/*#ul li a:hover {*/
+/*    border-bottom:2px solid red;*/
+/*    transition:all .25s ease-in;*/
+/*    padding-bottom: 10px;*/
+/*}*/
+/*.brand{*/
+/*    float:left;*/
     
+/*}*/
+#navbar img {
+    margin-top:-10px;
+    max-height: 50px;
+    max-width: 100px;
 }
-.brand img {
-    max-height: 75px;
-    max-width: 125px;
+.navbar {
+    background-color:black;
+    padding-bottom: 10px;
 }
 
 #myVideo {
@@ -148,4 +153,8 @@ header {
 }
 * {
     box-sizing: border-box;
+}
+.icon-bar {
+    
+    background-color:white;
 }
