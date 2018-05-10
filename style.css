@@ -158,3 +158,8 @@ header {
     
     background-color:white;
 }
+.parallax{
+    height:700px;
+    background:transparent;
+    width:100;
+}
