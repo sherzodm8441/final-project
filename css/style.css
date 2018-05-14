@@ -1,6 +1,8 @@
 html,
 body {
     margin: 0;
+    background-color:black;
+    color:white;
     
 }
 
@@ -182,4 +184,8 @@ p{
     font-size:15px;
 }
 
+}
+#title {
+    float:right;
+    color:white;
 }
